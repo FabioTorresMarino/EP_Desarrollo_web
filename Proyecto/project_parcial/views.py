@@ -6,4 +6,8 @@ def index(request):
     return HttpResponse('Esta es mi primera vista')
 
 def login(request):
-    return render(request,'project_parcial/login.html')
+    return render(request,'project_parcial/login.html',{
+        'nombre':'Fabio'
+        'apellido':'Torres'
+        'edad':'20'
+    })
