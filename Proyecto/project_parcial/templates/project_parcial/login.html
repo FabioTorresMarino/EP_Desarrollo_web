@@ -4,9 +4,14 @@
         <title>Login</title>
     </head>
     <body>
-        <h4>Bienvenido a este proyecto</h4>
-        <h6>Nombre: {{ nombre }}</h6>
-        <h6>Apellido: {{ apellido }}</h6>
-        <h6>Edad: {{ edad }}</h6>
+        <h2>Bienvenido a este proyecto</h2>
+        <h4>Usuarios del proyecto</h4>
+        <br>
+        {% for usuario in usuarios %}
+        <h4>Nombre: {{ usuario.0 }}</h4>
+        <h4>Apellido: {{ usuario.1 }}</h4>
+        <h4>Edad: {{ usuario.2 }}</h4>
+        <br>
+        {% endfor %}
     </body>
 </html>

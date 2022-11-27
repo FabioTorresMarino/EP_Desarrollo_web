@@ -6,8 +6,7 @@ def index(request):
     return HttpResponse('Esta es mi primera vista')
 
 def login(request):
+    lista_usuarios = [['Fabio','Torres','20'],['Cristiano','Ronaldo','37'],['Lionel','Messi','35']]
     return render(request,'project_parcial/login.html',{
-        'nombre':'Fabio'
-        'apellido':'Torres'
-        'edad':'20'
+        'usuarios': lista_usuarios,
     })
