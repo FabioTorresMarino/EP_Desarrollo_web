@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     </head>
-    <body style="background-color:#33B5FF">
-        <div class="row headerSide justify-content-end" style="color:white; background-color: #3386FF;">
+    <body id="cuerpoApp">
+        <div class="row headerSide justify-content-end" style="color:white; background-color:#33B5FF;">
             <div class="col-12">
                 <div class="row h-100 align-items-center text-center">
                     <h2>Bienvenido a este proyecto</h2>
@@ -18,27 +18,40 @@
         </div>
         <br>
 
-        <div class="row headerSide justify-content-end" style="color:white;">
+        <div class="row headerSide justify-content-end" style="color:white; background-color:#33B5FF;">
             <div class="col-12">
                 <div class="row h-100 align-items-center text-center">
                     
-                    <form method = "post" url="{% url 'project_parcial:login' %}">
+                    <form method = "post" url="{% url 'project_parcial:register_user' %}">
                     {% csrf_token %}
                         <div>
-                            <h4>Ingrese su nombre</h4>
+                            <h4>Ingrese un nuevo usuario</h4>
+                            <h4>Ingrese el nombre</h4>
                             <input type="text" name="nombreUsuario">
+                        </div>
+                        <div>
+                            <h4>Ingrese el apellido</h4>
+                            <input type="text" name="apellidoUsuario">
+                        </div>
+                        <div>
+                            <h4>Ingrese el codigo</h4>
+                            <input type="number" name="codigo_usuario">
                         </div>
                         <div>
                             <h4>Ingrese la clave</h4>
                             <input type="text" name="clave">
                         </div>
                         <br>
-                        <button type="submit">Login</button>
-                    </form>                    
+                        <button type="submit">Registrar usuario</button>
+                    </form>
+                    
+                    
                 </div>
             </div>
         </div>
-        <br>   
+        <br>
+        
+        
         
     </body>
 </html>
