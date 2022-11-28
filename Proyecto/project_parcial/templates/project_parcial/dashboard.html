@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Status</title>
+        <title>Dashboard</title>
         <link href="login.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -11,7 +11,7 @@
         <div class="row headerSide justify-content-end" style="color:white; background-color: #3386FF;">
             <div class="col-12">
                 <div class="row h-100">
-                    <h2>Status</h2>
+                    <h2>Dashboard</h2>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
             <div class="col-12">
                 <div class="row h-100 align-items-center">
                     
-                    <form method = "post" url="{% url 'project_parcial:view_tareas' %}">
+                    <form method = "post" url="{% url 'project_parcial:dashboard' %}">
                     {% csrf_token %}
                         <div>
                             <h4>Task</h4>
