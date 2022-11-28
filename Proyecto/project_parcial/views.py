@@ -24,3 +24,8 @@ def login(request):
     return render(request,'project_parcial/login.html',{
         'usuarios': lista_usuarios,
     })
+def dashboard(request):
+    return render(request,'')
+def view_tareas(request):
+    return  render(request,'')
+    
